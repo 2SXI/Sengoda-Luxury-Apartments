@@ -1,0 +1,836 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sengoda Luxury Apartments — Serviced Stays in Rosebank, Sandton &amp; Illovo</title>
+<meta name="description" content="Sengoda Luxury Apartments offers premium short-term, apartment-style accommodation across Rosebank, Sandton and Illovo, Johannesburg. Fully furnished 1–2 bedroom apartments with hotel-like service. Airbnb Superhost, 4.9★ rated.">
+<meta name="theme-color" content="#1B1812">
+
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="Sengoda Luxury Apartments — Johannesburg">
+<meta property="og:description" content="Premium short-stay apartments in Rosebank, Sandton and Illovo. Fully furnished, self check-in, hotel-like service. Airbnb Superhost.">
+<meta property="og:locale" content="en_ZA">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "Sengoda Luxury Apartments",
+  "description": "Premium short-term serviced apartments across Rosebank, Sandton and Illovo, Johannesburg, combining apartment-style living with hotel-like comfort and service.",
+  "telephone": "+27601506652",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "23 Tyrwhitt Ave",
+    "addressLocality": "Rosebank, Johannesburg",
+    "postalCode": "2196",
+    "addressRegion": "Gauteng",
+    "addressCountry": "ZA"
+  },
+  "areaServed": ["Rosebank, Johannesburg", "Sandton, Johannesburg", "Illovo, Johannesburg"],
+  "priceRange": "$$$",
+  "starRating": { "@type": "Rating", "ratingValue": "4.9" },
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Wi-Fi" },
+    { "@type": "LocationFeatureSpecification", "name": "Fully equipped kitchen" },
+    { "@type": "LocationFeatureSpecification", "name": "Parking" },
+    { "@type": "LocationFeatureSpecification", "name": "Self check-in" },
+    { "@type": "LocationFeatureSpecification", "name": "Workspace" }
+  ]
+}
+</script>
+
+<style>
+/* =========================================================
+   SENGODA LUXURY APARTMENTS — design tokens
+   Palette: warm espresso ink, ivory, soft brass/gold.
+   Type: Cormorant Garamond (display, hospitality-grade serif)
+         + Work Sans (clean geometric body/UI)
+   Structural motif: a slim brass key-line — a nod to key-card
+   check-in — used as the recurring divider instead of generic rules.
+   ========================================================= */
+:root{
+  --ink:        #1B1812;
+  --ink-soft:   #262119;
+  --ink-softer: #332C21;
+  --ivory:      #F8F4EC;
+  --ivory-dim:  #EFE8D9;
+  --stone:      #8B8373;
+  --gold:       #B08D57;
+  --gold-soft:  #CDAB76;
+  --gold-pale:  #E7D7B8;
+  --line-dark:  rgba(248,244,236,0.14);
+  --line-light: rgba(27,24,18,0.12);
+
+  --font-display: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+  --font-body: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --container: 1240px;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+  --radius: 3px;
+  --ease: cubic-bezier(.22,.68,0,1);
+}
+
+*, *::before, *::after{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto; }
+  *, *::before, *::after{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important; }
+}
+
+body{ margin:0; background:var(--ivory); color:var(--ink); font-family:var(--font-body); font-size:16px; line-height:1.65; -webkit-font-smoothing:antialiased; }
+img{ max-width:100%; display:block; }
+a{ color:inherit; text-decoration:none; }
+ul{ list-style:none; margin:0; padding:0; }
+h1,h2,h3{ font-family:var(--font-display); font-weight:600; margin:0; letter-spacing:.01em; }
+p{ margin:0; }
+button{ font-family:inherit; }
+
+.skip-link{ position:absolute; left:-999px; top:0; background:var(--gold); color:var(--ink); padding:.75rem 1.25rem; z-index:999; font-weight:600; }
+.skip-link:focus{ left:1rem; top:1rem; }
+:focus-visible{ outline:2px solid var(--gold); outline-offset:3px; }
+
+/* -------- shared -------- */
+.eyebrow{ font-family:var(--font-body); font-weight:600; font-size:.74rem; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); margin-bottom:1rem; display:block; }
+.eyebrow-light{ color:var(--gold-soft); }
+
+.section-head{ max-width:680px; margin:0 auto 3.5rem; padding:0 var(--gutter); }
+.section-head h2{ font-size:clamp(2.2rem,4vw,3.2rem); margin-bottom:.85rem; line-height:1.05; font-weight:600; }
+.section-head p{ color:#4a4337; font-size:1.08rem; }
+.section-head-light h2{ color:var(--ivory); }
+.section-head-light p{ color:var(--ivory-dim); opacity:.82; }
+.section-head-center{ text-align:center; margin-left:auto; margin-right:auto; }
+
+.btn{ display:inline-flex; align-items:center; justify-content:center; gap:.55rem; padding:.9rem 1.8rem; font-family:var(--font-body); font-weight:600; font-size:.88rem; letter-spacing:.04em; text-transform:uppercase; border-radius:var(--radius); border:1px solid transparent; cursor:pointer; transition:transform .25s var(--ease), background .25s var(--ease), color .25s var(--ease), border-color .25s var(--ease); white-space:nowrap; }
+.btn-primary{ background:var(--gold); color:var(--ink); }
+.btn-primary:hover{ background:var(--gold-soft); transform:translateY(-2px); }
+.btn-ghost{ border-color:currentColor; color:var(--ink); background:transparent; }
+.btn-ghost:hover{ background:var(--ink); color:var(--ivory); transform:translateY(-2px); }
+.btn-ghost-light{ border-color:var(--line-dark); color:var(--ivory); background:transparent; }
+.btn-ghost-light:hover{ background:var(--ivory); color:var(--ink); transform:translateY(-2px); }
+.btn-lg{ padding:1.05rem 2.2rem; font-size:.92rem; }
+.btn-block{ width:100%; }
+
+/* keyline divider motif */
+.keyline{ display:flex; align-items:center; gap:1rem; max-width:var(--container); margin:0 auto; padding:2.25rem var(--gutter); }
+.keyline::before, .keyline::after{ content:""; flex:1; height:1px; background:var(--line-light); }
+.keyline span{ font-family:var(--font-body); font-size:.68rem; letter-spacing:.18em; text-transform:uppercase; color:var(--stone); white-space:nowrap; }
+.keyline-dark::before, .keyline-dark::after{ background:var(--line-dark); }
+.keyline-dark span{ color:var(--gold-soft); }
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+.site-header{ position:sticky; top:0; z-index:200; background:rgba(27,24,18,0.92); backdrop-filter:blur(8px); color:var(--ivory); }
+.header-inner{ max-width:var(--container); margin:0 auto; padding:1.1rem var(--gutter); display:flex; align-items:center; gap:2rem; }
+.brand{ display:flex; flex-direction:column; margin-right:auto; line-height:1; }
+.brand-name{ font-family:var(--font-display); font-weight:600; font-size:1.45rem; letter-spacing:.03em; }
+.brand-sub{ font-family:var(--font-body); font-size:.6rem; letter-spacing:.22em; text-transform:uppercase; color:var(--gold-soft); margin-top:.2rem; }
+
+.main-nav{ display:flex; gap:1.85rem; }
+.main-nav a{ font-size:.82rem; font-weight:500; letter-spacing:.04em; text-transform:uppercase; position:relative; padding:.3rem 0; }
+.main-nav a::after{ content:""; position:absolute; left:0; right:100%; bottom:0; height:1px; background:var(--gold); transition:right .25s var(--ease); }
+.main-nav a:hover::after{ right:0; }
+
+.header-actions{ display:flex; align-items:center; gap:1.25rem; }
+.header-phone{ font-size:.85rem; color:var(--ivory-dim); }
+.header-phone:hover{ color:var(--gold-soft); }
+
+.nav-toggle{ display:none; flex-direction:column; justify-content:center; gap:5px; width:2.2rem; height:2.2rem; background:none; border:none; cursor:pointer; }
+.nav-toggle span{ width:100%; height:2px; background:var(--ivory); }
+.mobile-nav{ display:none; flex-direction:column; gap:1rem; padding:0 var(--gutter) 1.5rem; }
+.mobile-nav.open{ display:flex; }
+.mobile-nav a{ font-size:.95rem; font-weight:500; text-transform:uppercase; letter-spacing:.04em; padding:.35rem 0; }
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero{ position:relative; min-height:88vh; display:flex; align-items:flex-end; color:var(--ivory); overflow:hidden; }
+.hero-bg{ position:absolute; inset:0; z-index:0; }
+.hero-bg img{ width:100%; height:100%; object-fit:cover; filter:saturate(1.02) brightness(.72); }
+.hero-bg::after{ content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(27,24,18,0.15) 0%, rgba(27,24,18,0.55) 68%, rgba(27,24,18,0.92) 100%); }
+.hero-inner{ position:relative; z-index:1; max-width:var(--container); margin:0 auto; padding:0 var(--gutter) clamp(3rem,7vw,5rem); width:100%; }
+.hero-badges{ display:flex; gap:.75rem; flex-wrap:wrap; margin-bottom:1.5rem; }
+.hero-badge{ display:flex; align-items:center; gap:.45rem; background:rgba(27,24,18,0.55); border:1px solid var(--line-dark); padding:.5rem .9rem; font-size:.78rem; letter-spacing:.03em; }
+.hero-badge strong{ color:var(--gold-soft); font-family:var(--font-display); font-size:.95rem; }
+
+.hero-title{ font-size:clamp(2.6rem,6vw,5rem); line-height:1.03; margin-bottom:1.25rem; max-width:18ch; font-weight:600; }
+.hero-title em{ font-style:italic; color:var(--gold-soft); }
+.hero-sub{ font-family:var(--font-body); font-size:1.15rem; color:var(--ivory-dim); max-width:48ch; margin-bottom:2.25rem; }
+.hero-ctas{ display:flex; gap:1rem; flex-wrap:wrap; }
+.hero .btn-ghost{ border-color:var(--line-dark); color:var(--ivory); }
+.hero .btn-ghost:hover{ background:var(--ivory); color:var(--ink); }
+
+/* =========================================================
+   TRUST BAR
+   ========================================================= */
+.trust-bar{ background:var(--ink); color:var(--ivory); border-top:1px solid var(--line-dark); }
+.trust-grid{ max-width:var(--container); margin:0 auto; padding:2.25rem var(--gutter); display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; }
+.trust-item{ text-align:center; }
+.trust-item strong{ display:block; font-family:var(--font-display); font-size:2.1rem; color:var(--gold-soft); font-weight:600; }
+.trust-item span{ font-size:.78rem; letter-spacing:.05em; text-transform:uppercase; color:var(--ivory-dim); }
+
+/* =========================================================
+   PROPERTIES / AREAS
+   ========================================================= */
+.properties{ padding:clamp(4.5rem,8vw,7.5rem) 0; }
+.property-grid{ max-width:var(--container); margin:0 auto; padding:0 var(--gutter); display:grid; grid-template-columns:repeat(3,1fr); gap:1.75rem; }
+.property-card{ background:#fff; border:1px solid var(--line-light); overflow:hidden; transition:transform .35s var(--ease), box-shadow .35s var(--ease); }
+.property-card:hover{ transform:translateY(-6px); box-shadow:0 24px 48px -16px rgba(27,24,18,0.22); }
+.property-media{ position:relative; aspect-ratio:4/3; overflow:hidden; }
+.property-media img{ width:100%; height:100%; object-fit:cover; transition:transform .6s var(--ease); }
+.property-card:hover .property-media img{ transform:scale(1.06); }
+.property-tag{ position:absolute; top:1rem; left:1rem; background:rgba(27,24,18,0.78); color:var(--gold-soft); font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; padding:.4rem .75rem; }
+.property-body{ padding:1.75rem; }
+.property-body h3{ font-size:1.6rem; margin-bottom:.5rem; }
+.property-body p{ color:#4a4337; font-size:.95rem; margin-bottom:1rem; }
+.property-meta{ display:flex; gap:1.25rem; font-size:.78rem; color:var(--stone); letter-spacing:.03em; text-transform:uppercase; border-top:1px solid var(--line-light); padding-top:1rem; }
+
+/* =========================================================
+   AMENITIES
+   ========================================================= */
+.amenities{ background:var(--ink); color:var(--ivory); padding:clamp(4.5rem,8vw,7.5rem) 0; }
+.amenity-grid{ max-width:var(--container); margin:0 auto; padding:0 var(--gutter); display:grid; grid-template-columns:repeat(5,1fr); gap:1px; background:var(--line-dark); border:1px solid var(--line-dark); }
+.amenity-cell{ background:var(--ink); padding:2rem 1.25rem; text-align:center; }
+.amenity-icon{ width:2.4rem; height:2.4rem; margin:0 auto 1rem; border:1px solid var(--gold-soft); border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--gold-soft); }
+.amenity-cell h4{ font-family:var(--font-body); font-weight:600; font-size:.88rem; letter-spacing:.02em; margin-bottom:.4rem; }
+.amenity-cell span{ font-size:.74rem; color:var(--ivory-dim); opacity:.75; }
+.amenities-note{ max-width:var(--container); margin:2rem auto 0; padding:0 var(--gutter); font-size:.82rem; color:var(--ivory-dim); opacity:.7; text-align:center; }
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+.about{ max-width:var(--container); margin:0 auto; padding:clamp(4.5rem,8vw,7.5rem) var(--gutter); display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(2.5rem,5vw,5rem); align-items:center; }
+.about-media{ position:relative; }
+.about-media img{ aspect-ratio:4/5; object-fit:cover; }
+.about-media-caption{ position:absolute; bottom:1.25rem; left:1.25rem; background:rgba(27,24,18,0.75); color:var(--gold-soft); padding:.5rem .85rem; font-size:.76rem; letter-spacing:.06em; text-transform:uppercase; }
+.about-copy h2{ font-size:clamp(2.1rem,3.6vw,2.9rem); margin-bottom:1.25rem; }
+.about-copy p{ color:#4a4337; margin-bottom:1.15rem; max-width:52ch; }
+.about-list{ display:flex; flex-direction:column; gap:.9rem; margin-top:1.75rem; }
+.about-list li{ display:flex; align-items:baseline; gap:.75rem; font-size:1rem; color:#33301f; }
+.about-list li::before{ content:""; width:7px; height:7px; background:var(--gold); border-radius:50%; flex:none; }
+
+/* =========================================================
+   LOCATIONS / NEIGHBOURHOOD
+   ========================================================= */
+.locations{ background:var(--ivory-dim); padding:clamp(4.5rem,8vw,7.5rem) 0; }
+.location-grid{ max-width:var(--container); margin:0 auto; padding:0 var(--gutter); display:grid; grid-template-columns:repeat(2,1fr); gap:2rem; }
+.location-card{ background:#fff; padding:2.25rem; border-left:3px solid var(--gold); }
+.location-card h3{ font-size:1.7rem; margin-bottom:1rem; }
+.location-tags{ display:flex; flex-wrap:wrap; gap:.6rem; }
+.location-tag{ font-size:.82rem; padding:.45rem .9rem; background:var(--ivory-dim); color:#4a4337; border-radius:999px; }
+
+/* =========================================================
+   REVIEWS
+   ========================================================= */
+.reviews{ padding:clamp(4.5rem,8vw,7.5rem) 0; }
+.review-scores{ max-width:var(--container); margin:0 auto 3rem; padding:0 var(--gutter); display:flex; gap:2rem; flex-wrap:wrap; justify-content:center; }
+.score-card{ text-align:center; padding:1.5rem 2rem; border:1px solid var(--line-light); min-width:180px; }
+.score-card strong{ display:block; font-family:var(--font-display); font-size:2.6rem; color:var(--gold); font-weight:600; }
+.score-card span{ font-size:.8rem; letter-spacing:.04em; text-transform:uppercase; color:var(--stone); }
+.review-grid{ max-width:var(--container); margin:0 auto; padding:0 var(--gutter); display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+.review-card{ padding:2rem; background:#fff; border:1px solid var(--line-light); }
+.review-stars{ color:var(--gold); font-size:.95rem; margin-bottom:1rem; letter-spacing:.15em; }
+.review-card p{ color:#3a362b; margin-bottom:1.1rem; font-size:.98rem; }
+.review-card cite{ font-size:.82rem; font-style:normal; color:var(--stone); letter-spacing:.02em; }
+.review-note{ max-width:var(--container); margin:2rem auto 0; padding:0 var(--gutter); font-size:.82rem; opacity:.65; text-align:center; }
+
+/* =========================================================
+   BOOKING / ENQUIRY
+   ========================================================= */
+.booking{ background:var(--ink); color:var(--ivory); padding:clamp(4.5rem,8vw,7.5rem) 0; }
+.booking-grid{ max-width:var(--container); margin:0 auto; padding:0 var(--gutter); display:grid; grid-template-columns:.9fr 1.1fr; gap:clamp(2.5rem,5vw,5rem); }
+.booking-info h2{ font-size:clamp(2.1rem,3.6vw,2.9rem); color:var(--ivory); margin-bottom:1.25rem; }
+.booking-lead{ color:var(--ivory-dim); max-width:46ch; margin-bottom:2rem; }
+.booking-channels{ display:flex; flex-direction:column; gap:1.1rem; margin-bottom:2rem; }
+.booking-channels li{ display:flex; flex-direction:column; gap:.2rem; }
+.channel-label{ font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; color:var(--gold-soft); }
+.booking-channels a, .booking-channels span{ font-size:1.05rem; }
+.booking-channels a:hover{ color:var(--gold-soft); }
+.booking-platforms{ display:flex; gap:.75rem; flex-wrap:wrap; }
+.platform-pill{ border:1px solid var(--line-dark); padding:.5rem 1rem; font-size:.8rem; letter-spacing:.03em; }
+
+.booking-form{ background:var(--ink-soft); border:1px solid var(--line-dark); padding:2rem; display:flex; flex-direction:column; gap:1.1rem; }
+.form-row{ display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+.booking-form label{ font-size:.76rem; text-transform:uppercase; letter-spacing:.06em; color:var(--ivory-dim); display:block; margin-bottom:.4rem; }
+.field{ display:flex; flex-direction:column; }
+.booking-form input, .booking-form select, .booking-form textarea{ width:100%; padding:.85rem 1rem; background:var(--ink); border:1px solid var(--line-dark); color:var(--ivory); font-family:var(--font-body); font-size:.95rem; border-radius:var(--radius); }
+.booking-form input:focus, .booking-form select:focus, .booking-form textarea:focus{ outline:none; border-color:var(--gold); }
+.booking-form input[type="date"]{ color-scheme:dark; }
+.guest-stepper{ display:flex; align-items:center; gap:.9rem; background:var(--ink); border:1px solid var(--line-dark); border-radius:var(--radius); padding:.55rem .9rem; }
+.guest-stepper button{ width:2rem; height:2rem; border-radius:50%; border:1px solid var(--gold-soft); background:transparent; color:var(--gold-soft); font-size:1.1rem; cursor:pointer; line-height:1; display:flex; align-items:center; justify-content:center; }
+.guest-stepper button:hover{ background:var(--gold-soft); color:var(--ink); }
+.guest-count{ flex:1; text-align:center; font-size:1rem; }
+.form-note{ font-size:.82rem; color:var(--ivory-dim); opacity:.78; }
+.form-status{ font-size:.9rem; color:var(--gold-soft); min-height:1.2em; }
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.site-footer{ background:var(--ink); color:var(--ivory-dim); border-top:1px solid var(--line-dark); }
+.footer-inner{ max-width:var(--container); margin:0 auto; padding:3.5rem var(--gutter) 2.25rem; display:grid; grid-template-columns:1.3fr 1fr 1fr 1fr; gap:2rem; }
+.footer-brand .brand-name{ color:var(--ivory); }
+.footer-brand p{ font-size:.85rem; opacity:.7; max-width:26ch; margin-top:.9rem; }
+.footer-col h5{ font-family:var(--font-body); font-weight:600; font-size:.78rem; letter-spacing:.1em; text-transform:uppercase; color:var(--gold-soft); margin-bottom:1rem; }
+.footer-col ul{ display:flex; flex-direction:column; gap:.7rem; font-size:.88rem; }
+.footer-col a:hover{ color:var(--gold-soft); }
+.footer-bottom{ border-top:1px solid var(--line-dark); padding:1.25rem var(--gutter); text-align:center; font-size:.78rem; opacity:.6; }
+
+/* sticky mobile book bar */
+.mobile-book-bar{ display:none; position:fixed; bottom:0; left:0; right:0; z-index:150; background:var(--ink); border-top:1px solid var(--line-dark); padding:.85rem var(--gutter); align-items:center; justify-content:space-between; gap:1rem; }
+.mobile-book-bar .btn{ flex:1; }
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width:980px){
+  .main-nav, .header-actions{ display:none; }
+  .nav-toggle{ display:flex; }
+  .trust-grid{ grid-template-columns:repeat(2,1fr); }
+  .property-grid{ grid-template-columns:1fr; max-width:480px; }
+  .amenity-grid{ grid-template-columns:repeat(2,1fr); }
+  .about{ grid-template-columns:1fr; }
+  .about-media{ max-width:480px; }
+  .location-grid{ grid-template-columns:1fr; }
+  .review-grid{ grid-template-columns:1fr; max-width:480px; }
+  .booking-grid{ grid-template-columns:1fr; }
+  .footer-inner{ grid-template-columns:1fr 1fr; gap:2rem; }
+  .mobile-book-bar{ display:flex; }
+  body{ padding-bottom:4.5rem; }
+}
+@media (max-width:640px){
+  .form-row{ grid-template-columns:1fr; }
+  .footer-inner{ grid-template-columns:1fr; }
+  .hero{ min-height:92vh; }
+}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <a href="#top" class="brand">
+      <span class="brand-name">Sengoda</span>
+      <span class="brand-sub">Luxury Apartments</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <a href="#properties">Properties</a>
+      <a href="#amenities">Amenities</a>
+      <a href="#locations">Locations</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#book">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="header-phone" href="tel:+27601506652">060 150 6652</a>
+      <a class="btn btn-primary" href="#book">Check availability</a>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#properties">Properties</a>
+    <a href="#amenities">Amenities</a>
+    <a href="#locations">Locations</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#book">Contact</a>
+    <a class="header-phone" href="tel:+27601506652">Call 060 150 6652</a>
+    <a class="btn btn-primary" href="#book">Check availability</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1741764014072-68953e93cd48?auto=format&fit=crop&w=1800&q=80"
+           alt="Modern luxury apartment living room with open-concept kitchen"
+           width="1800" height="1200" loading="eager" fetchpriority="high">
+    </div>
+    <div class="hero-inner">
+      <div class="hero-badges">
+        <span class="hero-badge"><strong>4.9★</strong>&nbsp;Airbnb rating</span>
+        <span class="hero-badge"><strong>9.4/10</strong>&nbsp;Booking.com</span>
+        <span class="hero-badge"><strong>★</strong>&nbsp;Airbnb Superhost</span>
+      </div>
+      <h1 class="hero-title">Apartment-style living, <em>hotel-grade comfort.</em></h1>
+      <p class="hero-sub">Fully furnished luxury apartments across Rosebank, Sandton and Illovo — for business trips, relocations and leisure stays in Johannesburg.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary btn-lg" href="#book">Check availability</a>
+        <a class="btn btn-ghost btn-lg" href="#properties">View properties</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUST BAR ============ -->
+  <section class="trust-bar">
+    <div class="trust-grid">
+      <div class="trust-item"><strong>4.9★</strong><span>Airbnb rating</span></div>
+      <div class="trust-item"><strong>9.4/10</strong><span>Booking.com score</span></div>
+      <div class="trust-item"><strong>3</strong><span>Prime Johannesburg areas</span></div>
+      <div class="trust-item"><strong>Superhost</strong><span>Airbnb status</span></div>
+    </div>
+  </section>
+
+  <!-- ============ PROPERTIES ============ -->
+  <section class="properties" id="properties">
+    <div class="section-head section-head-center">
+      <span class="eyebrow">Where we host</span>
+      <h2>Properties across three prime areas</h2>
+      <p>Each apartment is fully furnished with a modern, luxury interior — from quick business trips to extended stays.</p>
+    </div>
+
+    <div class="property-grid">
+      <article class="property-card">
+        <div class="property-media">
+          <img src="https://images.unsplash.com/photo-1686056040370-b5e5c06c4273?auto=format&fit=crop&w=900&q=80" alt="Luxury apartment living room and kitchen in Rosebank" loading="lazy" width="900" height="675">
+          <span class="property-tag">Rosebank</span>
+        </div>
+        <div class="property-body">
+          <h3>Rosebank</h3>
+          <p>Steps from Rosebank Mall, The Zone and the Gautrain — restaurants, galleries and shopping on your doorstep.</p>
+          <div class="property-meta">
+            <span>1–2 Bed</span><span>2–4 Guests</span><span>Self check-in</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="property-card">
+        <div class="property-media">
+          <img src="https://images.unsplash.com/photo-1632743441209-8a09b8a37e25?auto=format&fit=crop&w=900&q=80" alt="Luxury apartment living room with large window in Sandton" loading="lazy" width="900" height="675">
+          <span class="property-tag">Sandton</span>
+        </div>
+        <div class="property-body">
+          <h3>Sandton</h3>
+          <p>In the heart of Johannesburg's business district — close to Sandton City and Melrose Arch.</p>
+          <div class="property-meta">
+            <span>1–2 Bed</span><span>2–4 Guests</span><span>Self check-in</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="property-card">
+        <div class="property-media">
+          <img src="https://images.unsplash.com/photo-1680416124510-5eae1beca412?auto=format&fit=crop&w=900&q=80" alt="Luxury apartment living room and kitchen in Illovo" loading="lazy" width="900" height="675">
+          <span class="property-tag">Illovo</span>
+        </div>
+        <div class="property-body">
+          <h3>Illovo</h3>
+          <p>A quieter, leafy base between Sandton and Rosebank — easy reach of both business and leisure hubs.</p>
+          <div class="property-meta">
+            <span>1–2 Bed</span><span>2–4 Guests</span><span>Self check-in</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ AMENITIES ============ -->
+  <section class="amenities" id="amenities">
+    <div class="section-head section-head-light section-head-center">
+      <span class="eyebrow eyebrow-light">What's included</span>
+      <h2>Amenities &amp; comfort</h2>
+      <p>Every apartment covers the essentials — select properties add extras like a pool, gym or 24-hour security.</p>
+    </div>
+
+    <div class="amenity-grid">
+      <div class="amenity-cell">
+        <div class="amenity-icon">◈</div>
+        <h4>Wi-Fi</h4>
+        <span>All properties</span>
+      </div>
+      <div class="amenity-cell">
+        <div class="amenity-icon">◈</div>
+        <h4>Full Kitchen</h4>
+        <span>All properties</span>
+      </div>
+      <div class="amenity-cell">
+        <div class="amenity-icon">◈</div>
+        <h4>Parking</h4>
+        <span>All properties</span>
+      </div>
+      <div class="amenity-cell">
+        <div class="amenity-icon">◈</div>
+        <h4>Workspace</h4>
+        <span>All properties</span>
+      </div>
+      <div class="amenity-cell">
+        <div class="amenity-icon">◈</div>
+        <h4>Self Check-in</h4>
+        <span>All properties</span>
+      </div>
+      <div class="amenity-cell">
+        <div class="amenity-icon">◈</div>
+        <h4>Air Conditioning</h4>
+        <span>Selected properties</span>
+      </div>
+      <div class="amenity-cell">
+        <div class="amenity-icon">◈</div>
+        <h4>Swimming Pool</h4>
+        <span>Selected properties</span>
+      </div>
+      <div class="amenity-cell">
+        <div class="amenity-icon">◈</div>
+        <h4>Gym</h4>
+        <span>Selected properties</span>
+      </div>
+      <div class="amenity-cell">
+        <div class="amenity-icon">◈</div>
+        <h4>Laundry</h4>
+        <span>Selected properties</span>
+      </div>
+      <div class="amenity-cell">
+        <div class="amenity-icon">◈</div>
+        <h4>24-Hour Security</h4>
+        <span>Selected properties</span>
+      </div>
+    </div>
+    <p class="amenities-note">Exact amenities vary by apartment — confirmed with you when you enquire about a specific property and dates.</p>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="about-media">
+      <img src="https://images.unsplash.com/photo-1646974400439-321c4a9240b9?auto=format&fit=crop&w=1100&q=80" alt="Elegant living area in a Sengoda luxury apartment" loading="lazy" width="1100" height="1375">
+      <span class="about-media-caption">Sengoda Luxury Apartments</span>
+    </div>
+    <div class="about-copy">
+      <span class="eyebrow">About Sengoda</span>
+      <h2>Premium short stays, done properly</h2>
+      <p>Sengoda provides premium short-term accommodation for business and leisure travellers, combining apartment-style living with hotel-like comfort and service.</p>
+      <p>Every apartment is fully furnished with modern, luxury interiors — built for guests who want the space and privacy of an apartment without giving up the comfort and consistency of a well-run hotel stay.</p>
+      <ul class="about-list">
+        <li>Fully furnished 1–2 bedroom apartments, 2–4 guests</li>
+        <li>Self check-in available at properties</li>
+        <li>Airbnb Superhost with a 4.9★ guest rating</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="keyline" aria-hidden="true"><span>Rosebank · Sandton · Illovo</span></div>
+
+  <!-- ============ LOCATIONS ============ -->
+  <section class="locations" id="locations">
+    <div class="section-head section-head-center">
+      <span class="eyebrow">Neighbourhoods</span>
+      <h2>Right where you need to be</h2>
+      <p>Each area puts you close to the restaurants, shopping and business addresses Johannesburg is known for.</p>
+    </div>
+
+    <div class="location-grid">
+      <div class="location-card">
+        <h3>Rosebank</h3>
+        <div class="location-tags">
+          <span class="location-tag">Rosebank Mall</span>
+          <span class="location-tag">The Zone</span>
+          <span class="location-tag">Gautrain</span>
+          <span class="location-tag">Restaurants &amp; cafés</span>
+          <span class="location-tag">Shopping</span>
+          <span class="location-tag">Galleries</span>
+        </div>
+      </div>
+      <div class="location-card">
+        <h3>Sandton &amp; Illovo</h3>
+        <div class="location-tags">
+          <span class="location-tag">Sandton City</span>
+          <span class="location-tag">Melrose Arch</span>
+          <span class="location-tag">Rosebank</span>
+          <span class="location-tag">Restaurants</span>
+          <span class="location-tag">Business district</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS ============ -->
+  <section class="reviews" id="reviews">
+    <div class="section-head section-head-center">
+      <span class="eyebrow">Guest reputation</span>
+      <h2>What guests say</h2>
+      <p>Sengoda is an Airbnb Superhost, with consistently strong ratings for cleanliness, location, communication and comfort.</p>
+    </div>
+
+    <div class="review-scores">
+      <div class="score-card">
+        <strong>4.9★</strong>
+        <span>Airbnb rating</span>
+      </div>
+      <div class="score-card">
+        <strong>9.4/10</strong>
+        <span>Booking.com score</span>
+      </div>
+      <div class="score-card">
+        <strong>Superhost</strong>
+        <span>Airbnb status</span>
+      </div>
+    </div>
+
+    <div class="review-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>"Spotless apartment, exactly as pictured, and the self check-in made arriving after a late flight completely painless."</p>
+        <cite>— Sample guest review, illustrative only</cite>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>"Great location in Rosebank — walked to dinner, the Gautrain, everything. Communication before arrival was excellent."</p>
+        <cite>— Sample guest review, illustrative only</cite>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>"Used the Sandton apartment for a work trip — fast Wi-Fi, a proper desk, and genuinely comfortable to come back to."</p>
+        <cite>— Sample guest review, illustrative only</cite>
+      </div>
+    </div>
+    <p class="review-note">The 4.9★ Airbnb rating, 9.4/10 Booking.com score and Superhost status above are real. The individual quotes are illustrative placeholders — swap them for actual guest review text pulled from Airbnb/Booking.com before this goes live.</p>
+  </section>
+
+  <!-- ============ BOOKING / ENQUIRY ============ -->
+  <section class="booking" id="book">
+    <div class="booking-grid">
+      <div class="booking-info">
+        <span class="eyebrow eyebrow-light">Book your stay</span>
+        <h2>Check availability</h2>
+        <p class="booking-lead">Send your dates and we'll confirm availability and pricing directly. A fully live booking calendar and instant confirmation are coming soon — for now every enquiry gets a direct, personal reply.</p>
+
+        <ul class="booking-channels">
+          <li>
+            <span class="channel-label">Phone</span>
+            <a href="tel:+27601506652">060 150 6652</a>
+          </li>
+          <li>
+            <span class="channel-label">Address</span>
+            <span>23 Tyrwhitt Ave, Rosebank, Johannesburg, 2196</span>
+          </li>
+          <li>
+            <span class="channel-label">Also booking via</span>
+            <div class="booking-platforms">
+              <span class="platform-pill">Airbnb</span>
+              <span class="platform-pill">Booking.com</span>
+            </div>
+          </li>
+        </ul>
+
+        <a class="btn btn-primary btn-lg" href="https://wa.me/27601506652" target="_blank" rel="noopener">Message on WhatsApp</a>
+      </div>
+
+      <form class="booking-form" id="bookingForm">
+        <p class="form-note">Fill in your dates and we'll open a WhatsApp message to Sengoda with everything pre-filled — nothing is booked until you hear back and confirm.</p>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="checkin">Check-in</label>
+            <input type="date" id="checkin" name="checkin" required>
+          </div>
+          <div class="field">
+            <label for="checkout">Check-out</label>
+            <input type="date" id="checkout" name="checkout" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="area">Preferred area</label>
+          <select id="area" name="area">
+            <option>No preference</option>
+            <option>Rosebank</option>
+            <option>Sandton</option>
+            <option>Illovo</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Guests</label>
+          <div class="guest-stepper">
+            <button type="button" id="guestMinus" aria-label="Decrease guests">−</button>
+            <span class="guest-count" id="guestCount">2 guests</span>
+            <button type="button" id="guestPlus" aria-label="Increase guests">+</button>
+          </div>
+          <input type="hidden" id="guests" name="guests" value="2">
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="phone">Phone / WhatsApp</label>
+            <input type="tel" id="phone" name="phone" required autocomplete="tel">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="notes">Anything else?</label>
+          <textarea id="notes" name="notes" rows="3" placeholder="e.g. arriving late, need parking, travelling for work…"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Send enquiry via WhatsApp</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="brand-name">Sengoda</span>
+      <p>Luxury serviced apartments across Rosebank, Sandton and Illovo, Johannesburg.</p>
+    </div>
+
+    <div class="footer-col">
+      <h5>Explore</h5>
+      <ul>
+        <li><a href="#properties">Properties</a></li>
+        <li><a href="#amenities">Amenities</a></li>
+        <li><a href="#locations">Locations</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5>Book</h5>
+      <ul>
+        <li><a href="#book">Check availability</a></li>
+        <li><a href="https://wa.me/27601506652" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><span>Airbnb &amp; Booking.com</span></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="tel:+27601506652">060 150 6652</a></li>
+        <li><span>23 Tyrwhitt Ave, Rosebank</span></li>
+        <li><span>Johannesburg, 2196</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> Sengoda Luxury Apartments. Johannesburg, Gauteng.</p>
+  </div>
+</footer>
+
+<!-- ============ MOBILE STICKY BOOK BAR ============ -->
+<div class="mobile-book-bar">
+  <a class="btn btn-ghost-light" href="tel:+27601506652">Call</a>
+  <a class="btn btn-primary" href="#book">Check availability</a>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  // ---- Mobile nav ----
+  var toggle = document.getElementById("navToggle");
+  var mobileNav = document.getElementById("mobileNav");
+  if (toggle && mobileNav) {
+    toggle.addEventListener("click", function () {
+      var isOpen = mobileNav.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      toggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+    });
+    mobileNav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        mobileNav.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Open menu");
+      });
+    });
+  }
+
+  // ---- Footer year ----
+  var yearEl = document.getElementById("year");
+  if (yearEl) { yearEl.textContent = new Date().getFullYear(); }
+
+  // ---- Date defaults + guard (checkout after checkin) ----
+  var checkin = document.getElementById("checkin");
+  var checkout = document.getElementById("checkout");
+  if (checkin && checkout) {
+    var today = new Date();
+    var tomorrow = new Date(today); tomorrow.setDate(today.getDate() + 1);
+    var dayAfter = new Date(today); dayAfter.setDate(today.getDate() + 2);
+    var toISO = function (d) { return d.toISOString().slice(0, 10); };
+
+    checkin.min = toISO(today);
+    checkout.min = toISO(tomorrow);
+    checkin.value = toISO(tomorrow);
+    checkout.value = toISO(dayAfter);
+
+    checkin.addEventListener("change", function () {
+      var ci = new Date(checkin.value);
+      var minCo = new Date(ci); minCo.setDate(ci.getDate() + 1);
+      checkout.min = toISO(minCo);
+      if (new Date(checkout.value) <= ci) { checkout.value = toISO(minCo); }
+    });
+  }
+
+  // ---- Guest stepper ----
+  var guestCount = document.getElementById("guestCount");
+  var guestsInput = document.getElementById("guests");
+  var guestMinus = document.getElementById("guestMinus");
+  var guestPlus = document.getElementById("guestPlus");
+  var guests = 2;
+
+  function renderGuests() {
+    guestCount.textContent = guests + (guests === 1 ? " guest" : " guests");
+    guestsInput.value = guests;
+  }
+  if (guestMinus && guestPlus) {
+    guestMinus.addEventListener("click", function () { if (guests > 1) { guests--; renderGuests(); } });
+    guestPlus.addEventListener("click", function () { if (guests < 4) { guests++; renderGuests(); } });
+  }
+
+  // ---- Booking form -> WhatsApp handoff ----
+  var form = document.getElementById("bookingForm");
+  var status = document.getElementById("formStatus");
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      var name = form.name.value.trim();
+      var phone = form.phone.value.trim();
+      var area = form.area.value;
+      var notes = form.notes.value.trim();
+      var ci = form.checkin.value;
+      var co = form.checkout.value;
+
+      if (!name || !phone || !ci || !co) {
+        status.textContent = "Please fill in your name, phone number and travel dates.";
+        return;
+      }
+
+      var lines = [
+        "Hi Sengoda, I'd like to check availability:",
+        "Name: " + name,
+        "Phone: " + phone,
+        "Check-in: " + ci,
+        "Check-out: " + co,
+        "Guests: " + guests,
+        "Preferred area: " + area
+      ];
+      if (notes) { lines.push("Notes: " + notes); }
+
+      var message = encodeURIComponent(lines.join("\n"));
+      window.open("https://wa.me/27601506652?text=" + message, "_blank", "noopener");
+      status.textContent = "Opening WhatsApp with your enquiry — send it to reach Sengoda directly.";
+    });
+  }
+})();
+</script>
+</body>
+</html>
